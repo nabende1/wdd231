@@ -1,112 +1,329 @@
-body{
-    font-size: 17px;;
-    color:#000080;
-    font-family: "Teachers", sans-serif;
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-header div{
-    display: flex;  
-    justify-content: center;
+
+body {
+    font-size: 17px;
+    color: #000080;
+    min-height: 100vh;
 }
-header img{
-    width: 100px; 
-    height: auto; 
-    margin: 1%;
+
+h1 {
+    text-align: left;
+    font-family: times, serif;
+    font-size: 1.5rem;
+    margin-left: 1rem;
 }
-header h1{
+
+h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    text-align: center;
+}
+
+section h2 {
+    color: #ffffff;
+    background-color: #000080;
+    font-family: "Sedan SC", serif;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    background-color: #000080;
+}
+
+header div h1 {
+    font-size: 2.3rem;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    margin: 3%;
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(254, 254, 254, 0.2);
+    /* Shadow effect */
+}
+
+header h1 {
     color: #f0f0f0;
     font-family: "Sedan SC", serif;
 }
-nav{
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+
+nav {
+    margin: 1rem auto;
+}
+
+/* small view navigation */
+#menu {
+    font-size: 2rem;
+    font-weight: bold;
+    border: 0;
+    background: none;
+    color: #dad6d6;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
     background-color: #020220;
+    color: #fff;
 }
-a{
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
     text-decoration: none;
-    color: #000080;
+    color: #fff;
 }
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    height: 50px;
-    padding: 30px;
-    padding-bottom: 0px;
-   
-  }
-main{
-    max-width: 99%;
-    margin: 0 auto; 
-    text-align: left; 
+
+.navigation a:hover {
+    background-color: #bbb;
+    color: #333;
+    font-weight: 700;
 }
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: white;
-    margin-bottom: 0;
+
+section {
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(95, 89, 89, 0.2);
 }
-.card{
-    background-color: #f0f0f0;
+
+.open a {
+    display: block;
+}
+
+.active::after {
+    content: " 🎯";
+}
+
+.card h2 {
     border: 1px #000080 solid;
     border-radius: 10px;
-    margin: 5px;
+    margin: 0px;
+    padding: 2%;
 }
-h2{
-    margin-top: 0px;
-    padding: 20px;
+
+#card2 h2 {
+    height: 3rem;
+    padding: 1rem;
+}
+
+.dotted-list {
+    margin: 5%;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+}
+
+.item {
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
     text-align: center;
-    background-color: #000080;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    padding: 10px;
+
 }
-#card1{
-    grid-column: 1 / 2;
-}
-#card2{
-    grid-column: 2 / 3;
-}
-#card3{
-    grid-column: 1 / 3;
-    grid-row: 2/4;
-}
+
 #card2 figure img {
-    width: 80%; 
-    height: auto; 
-    margin-right: 10px; 
+    width: 80%;
+    height: auto;
+    margin: 10px;
 }
 
-  a:hover {
+figure {
+    padding: .5rem;
+    text-align: center;
+}
+
+#card3 {
+    text-align: center;
+}
+
+.programs {
+    display: flex;
+    justify-content: center;
+}
+
+.programs .item {
+    margin: .2rem;
+    padding: .5rem;
     background-color: #555;
-  }
-
-header, footer{
-    background-color: #000080;
-    
+    min-width: 8rem;
 }
-footer{
+
+.programs_2 .item {
+    margin: 1rem;
+    padding: .5rem;
+    background-color: #4CAF50;
+}
+
+.programs_2 .item:nth-child(4),
+.programs_2 .item:nth-child(6) {
+    background-color: #000080;
+}
+
+.programs .item:hover {
+    color: #4CAF50;
+}
+
+a:hover,
+.item:hover {
+    color: #555;
+}
+
+
+header,
+footer {
+    background-color: #000080;
+
+}
+
+footer {
     height: 50px;
 }
-footer p{
+
+footer p {
     text-align: center;
     color: #f0f0f0;
     margin: 0;
 }
 
-section h2{ 
-    color:#ffffff;
-    font-family: "Sedan SC", serif;
-}
-.container2 {
-    display: flex; 
-    align-items: center; 
-    padding: 10px;
-}
+/* large view navigation ************************************/
+@media (min-width: 37.5em) {
+    h1 {
+        font-size: 2.5rem;
+        margin-left: 0;
+        text-align: center;
+    }
 
-figure{
-    text-align: center;
-}
-.container2 .text {
-    font-size: 28px; 
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 0px;
+        padding: 20px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #020220;
+    }
+
+    .navigation a {
+        display: flex;
+        flex: 1 1 100%;
+        padding: 1rem;
+        justify-content: center;
+    }
+
+    header div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        background-color: white;
+        margin-bottom: 0;
+    }
+
+    #card1 {
+        grid-column: 1 / 4;
+    }
+
+    #card2 {
+        grid-column: 4 / 6;
+    }
+
+    #card3 {
+        grid-column: 1 / 6;
+        grid-row: 2/3;
+    }
+
+    .card {
+        background-color: #f0f0f0;
+        border: 1px #000080 solid;
+        border-radius: 10px;
+        margin: 2px;
+        padding: 0px;
+    }
+
+    .dotted-list {
+        margin-left: 5%;
+        font-size: 1.2rem;
+        padding-top: 1rem;
+    }
+
+    h2 {
+        font-size: 15px;
+        margin-top: 0px;
+        padding: 20px;
+        text-align: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .programs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        max-width: 600px;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .programs_2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .container2 {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
 }
