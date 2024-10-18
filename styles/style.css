@@ -121,6 +121,15 @@ section {
     content: " 🎯";
 }
 
+.card {
+        background-color: #0083a8;
+        border: 1px #1d1a15 solid;
+        border-radius: 10px;
+        margin: 2rem;
+        padding: 0px;
+    }
+
+
 .card h2 {
     border: 1px #1d1a15 solid;
     border-radius: 10px;
@@ -174,9 +183,9 @@ figure {
 }
 
 .programs .item {
-    margin: .2rem;
+    margin: .5rem;
     padding: .5rem;
-    min-width: 8rem;
+    width: 8rem;
     background-color: #c99755;
     color: #1d1a15;
 }
