@@ -9,8 +9,8 @@
     <meta name="author" content="Nabende Brian">
     <meta property="og:title" content="Mbale Chamber of Commerce" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://your-github-repo-link.com/path-to-your-image.jpg" />
-    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:image" content="https://github.com/nabende1/chamber/blob/main/logo.png" />
+    <meta property="og:url" content="https://nabende1.github.io/wdd231/chamber/" />
     <meta property="og:description" content="A brief description of your page content." />
     <title>Mbale Chamber of Commerce</title>
 
@@ -49,10 +49,36 @@
             <a href="#learn-more" class="hero-button">Learn More</a>
         </section>
         <h1>Home</h1>
-        <section class="events">
-            <h2>Events</h2>
-            <!-- Featured businesses will go here -->
-        </section>
+        <section id="events">
+            <h2>Upcoming Events</h2>
+          
+            <div class="event">
+              <h3>Business Networking Event</h3>
+              <p class="event-date">Date: November 15, 2024</p>
+              <p class="event-location">Location: Chamber Hall, Downtown</p>
+              <p class="event-description">
+                Join us for an evening of networking with industry leaders and local businesses. Refreshments will be served.
+              </p>
+            </div>
+          
+            <div class="event">
+              <h3>Annual General Meeting</h3>
+              <p class="event-date">Date: December 10, 2024</p>
+              <p class="event-location">Location: City Conference Center</p>
+              <p class="event-description">
+                Our Annual General Meeting to discuss future plans and review the year's performance.
+              </p>
+            </div>
+          
+            <div class="event">
+              <h3>Holiday Charity Gala</h3>
+              <p class="event-date">Date: December 20, 2024</p>
+              <p class="event-location">Location: Grand Ballroom, Hotel XYZ</p>
+              <p class="event-description">
+                A charity event to raise funds for local charities, featuring live entertainment and an auction.
+              </p>
+            </div>
+          </section>          
 
         <section class="weather">
             <h2>Current weather</h2>
@@ -113,7 +139,6 @@
             </div>
         </section>
         <section class="businesses">
-            <h1>Our Members</h1>
             <!-- Toggle buttons for Grid and List View -->
             <div class="toggle-buttons">
                 <button id="grid-view-btn">Grid View</button>
@@ -127,11 +152,31 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; <span id="year"></span> Mbale Chamber of Commerce | Last Modified: <span id="last-modified"></span>
-        </p>
+        <div class="footer-container">
+            <!-- Address Section -->
+            <div class="footer-address">
+              <h4>Mbale Chamber of Commerce</h4>
+              <p>123 Commerce Street, Mbale</p>
+              <p>P.O. Box 456, Mbale, Uganda</p>
+              <p>Phone: +256 123 456 789</p>
+            </div>
+        
+            <!-- Social Media Section -->
+            <div class="footer-social-media">
+              <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a>
+              <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
+              <a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        
+            <!-- Author Section -->
+            <div class="footer-author">
+              <p>Wdd Class Project</p>
+              <p>Nabende Brian</p>
+              <p>&copy; <span id="year"></span> Mbale Chamber of Commerce | Last Modified: <span id="last-modified"></span>
+              </p>
+            </div>
+          </div>
     </footer>
-
-    <!-- JavaScript for dynamic footer info -->
 </body>
 
 </html>
