@@ -30,7 +30,7 @@
     <!-- Header -->
     <header>
         <div class="logo_div">
-            <img id="logo" src="images/logo.png" alt="logo" width="48px" height="48px">
+            <img id="logo" src="images/logo.png" alt="logo" width="48" height="48">
             <h1>Mbale<br><span>Chamber of Commerce</span></h1>
         </div>
         <button type="button" id="menu" aria-label="Open menu"></button>
@@ -44,10 +44,10 @@
 
     <!-- Main Content -->
     <main>
-        <section class="hero">
-            <img src="images/hero.jpg" alt="hero image" width="1200px" height="600px">
+        <div class="hero">
+            <img src="images/hero.jpg" alt="hero image" width="1200" height="600">
             <a href="#learn-more" class="hero-button">Learn More</a>
-        </section>
+        </div>
         <h1>Home</h1>
         <div class="container">
             <section id="events">
@@ -76,7 +76,7 @@
                 <h2>Current weather</h2>
                 <div class="weather-info">
                     <div class="weather-icon">
-                        <img src="images/weather.png" alt="Sunny" width="256px" height="256px">
+                        <img src="images/weather.png" alt="Sunny" width="256" height="256">
                         <!-- Placeholder for weather icon -->
                     </div>
                     <div class="weather-details">
@@ -84,6 +84,7 @@
                         <p>Sunny</p> <!-- Placeholder weather condition -->
                         <p>Mbale, Uganda</p> <!-- Placeholder location -->
                     </div>
+                </div>
             </section>
 
             <section class="forecast">
@@ -92,7 +93,7 @@
                     <!-- Forecast for Day 1 -->
                     <div class="forecast-day">
                         <p class="day">Today</p>
-                        <img src="images/sunny.png" alt="Sunny" class="weather-icon" width="300px" height="300px">
+                        <img src="images/sunny.png" alt="Sunny" class="weather-icon" width="300" height="300">
                         <p class="temperature">25°C</p>
                         <p class="condition">Sunny</p>
                     </div>
@@ -100,7 +101,7 @@
                     <!-- Forecast for Day 2 -->
                     <div class="forecast-day">
                         <p class="day">Tuesday</p>
-                        <img src="images/cloudy.png" alt="Cloudy" class="weather-icon" width="300px" height="300px">
+                        <img src="images/cloudy.png" alt="Cloudy" class="weather-icon" width="300" height="300">
                         <p class="temperature">22°C</p>
                         <p class="condition">Cloudy</p>
                     </div>
@@ -108,7 +109,7 @@
                     <!-- Forecast for Day 3 -->
                     <div class="forecast-day">
                         <p class="day">Wednesday</p>
-                        <img src="images/rainy.png" alt="Rainy" class="weather-icon" width="300px" height="300px">
+                        <img src="images/rainy.png" alt="Rainy" class="weather-icon" width="300" height="300">
                         <p class="temperature">18°C</p>
                         <p class="condition">Rainy</p>
                     </div>
@@ -116,8 +117,8 @@
                     <!-- Forecast for Day 4 -->
                     <div class="forecast-day">
                         <p class="day">Thursday</p>
-                        <img src="images/thunderstorm.png" alt="Thunderstorm" class="weather-icon" width="300px"
-                            height="300px">
+                        <img src="images/thunderstorm.png" alt="Thunderstorm" class="weather-icon" width="300"
+                            height="300">
                         <!-- Placeholder icon -->
                         <p class="temperature">20°C</p>
                         <p class="condition">Thunderstorm</p>
@@ -126,13 +127,13 @@
                     <!-- Forecast for Day 5 -->
                     <div class="forecast-day">
                         <p class="day">Friday</p>
-                        <img src="images/windy.png" alt="Windy" class="weather-icon" width="300px" height="300px">
+                        <img src="images/windy.png" alt="Windy" class="weather-icon" width="300" height="300">
                         <p class="temperature">23°C</p>
                         <p class="condition">Windy</p>
                     </div>
                 </div>
             </section>
-            <section class="businesses">
+            <div class="businesses">
                 <!-- Toggle buttons for Grid and List View -->
                 <div class="toggle-buttons">
                     <button id="grid-view-btn">Grid View</button>
@@ -141,7 +142,7 @@
 
                 <!-- Container where members will be displayed -->
                 <div id="members-container" class="grid-view"></div>
-            </section>
+            </div>
         </div>
     </main>
 
