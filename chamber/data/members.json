@@ -1,66 +1,66 @@
 [
+    
     {
-      "name": "Acme Corporation",
-      "address": "123 Main Street, City A",
-      "phone": "+1 123 456 7890",
-      "website": "https://www.acme.com",
-      "image": "acme.jpg",
-      "membershipLevel": 3,
-      "description": "Acme Corporation is a leader in innovative solutions."
-    },
-    {
-      "name": "Tech Innovators",
-      "address": "456 Elm Street, City B",
-      "phone": "+1 987 654 3210",
-      "website": "https://www.techinnovators.com",
-      "image": "tech.jpg",
-      "membershipLevel": 2,
-      "description": "Providing cutting-edge technology for businesses."
-    },
-    {
-      "name": "Green Energy",
-      "address": "789 Oak Avenue, City C",
-      "phone": "+1 555 555 5555",
-      "website": "https://www.greenenergy.com",
-      "image": "green.jpg",
-      "membershipLevel": 1,
-      "description": "Renewable energy for a sustainable future."
-    },
-    {
-      "name": "Health First",
-      "address": "321 Birch Lane, City D",
-      "phone": "+1 222 333 4444",
-      "website": "https://www.healthfirst.com",
-      "image": "health.jpg",
-      "membershipLevel": 3,
-      "description": "Health and wellness products for everyone."
-    },
-    {
-      "name": "Eco World",
-      "address": "987 Pine Street, City E",
-      "phone": "+1 666 777 8888",
-      "website": "https://www.ecoworld.com",
-      "image": "eco.jpg",
-      "membershipLevel": 2,
-      "description": "Eco-friendly products for modern living."
-    },
-    {
-      "name": "Foodies Delight",
-      "address": "654 Maple Road, City F",
-      "phone": "+1 999 000 1234",
-      "website": "https://www.foodiesdelight.com",
-      "image": "foodies.jpg",
-      "membershipLevel": 1,
-      "description": "Delicious food delivered to your door."
-    },
-    {
-      "name": "Tech Solutions",
-      "address": "321 Cedar Avenue, City G",
-      "phone": "+1 444 555 6666",
-      "website": "https://www.techsolutions.com",
-      "image": "solutions.jpg",
-      "membershipLevel": 3,
-      "description": "Innovative tech solutions for businesses."
-    }
-  ]
-  
+        "name": "Acme Corporation",
+        "address": "123 Main Street, City A",
+        "phone": "+1 123 456 7890",
+        "website": "https://www.acme.com",
+        "image": "acme.jpg",
+        "membershipLevel": 3,
+        "description": "Acme Corporation is a leader in innovative solutions."
+      },
+      {
+        "name": "Tech Innovators",
+        "address": "456 Elm Street, City B",
+        "phone": "+1 987 654 3210",
+        "website": "https://www.techinnovators.com",
+        "image": "tech.jpg",
+        "membershipLevel": 2,
+        "description": "Providing cutting-edge technology for businesses."
+      },
+      {
+        "name": "Green Energy",
+        "address": "789 Oak Avenue, City C",
+        "phone": "+1 555 555 5555",
+        "website": "https://www.greenenergy.com",
+        "image": "green.jpg",
+        "membershipLevel": 1,
+        "description": "Renewable energy for a sustainable future."
+      },
+      {
+        "name": "Health First",
+        "address": "321 Birch Lane, City D",
+        "phone": "+1 222 333 4444",
+        "website": "https://www.healthfirst.com",
+        "image": "health.jpg",
+        "membershipLevel": 3,
+        "description": "Health and wellness products for everyone."
+      },
+      {
+        "name": "Eco World",
+        "address": "987 Pine Street, City E",
+        "phone": "+1 666 777 8888",
+        "website": "https://www.ecoworld.com",
+        "image": "eco.jpg",
+        "membershipLevel": 2,
+        "description": "Eco-friendly products for modern living."
+      },
+      {
+        "name": "Foodies Delight",
+        "address": "654 Maple Road, City F",
+        "phone": "+1 999 000 1234",
+        "website": "https://www.foodiesdelight.com",
+        "image": "foodies.jpg",
+        "membershipLevel": 1,
+        "description": "Delicious food delivered to your door."
+      },
+      {
+        "name": "Tech Solutions",
+        "address": "321 Cedar Avenue, City G",
+        "phone": "+1 444 555 6666",
+        "website": "https://www.techsolutions.com",
+        "image": "solutions.jpg",
+        "membershipLevel": 3,
+        "description": "Innovative tech solutions for businesses."
+      }
+]

@@ -1,0 +1,82 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #f3f9ed; /* Light green for background */
+    color: #292c35; /* Dark charcoal for body text */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #292c35; /* Dark charcoal for header */
+    color: #f3f9ed; /* Light green text color for contrast */
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Section Headings */
+h1, h2 {
+    font-family: Arial, sans-serif;
+    color: #292c35; /* Dark charcoal for headers */
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* Paragraph and List Styling */
+p {
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 10px 0 10px 20px;
+    color: #292c35; /* Dark charcoal for list items */
+}
+
+/* Figure Styling */
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #292c35; /* Ensure figcaption has sufficient contrast */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #2972fb; /* Blue for image border */
+}
+
+/* Button and Accent Color */
+.button, .accent {
+    background-color: #fa316c; /* Pink-red for buttons and accents */
+    color: #f3f9ed; /* Light green for contrast text */
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover, .accent:hover {
+    background-color: #d7285b; /* Slightly darker pink-red for hover effect */
+}

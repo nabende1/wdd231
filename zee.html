@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Membership Form</title>
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover, .close:focus {
+            color: black;
+            cursor: pointer;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Membership Dropdown */
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            appearance: none;
+            background-color: #fff;
+            font-size: 16px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Join the Chamber of Commerce</h2>
+        <button onclick="openModal()">Open Membership Form</button>
+
+        <!-- Modal for Membership Form -->
+        <div class="modal" id="membershipModal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h3>Membership Application Form</h3>
+                <form action="thankyou.html" method="get" id="membership-form">
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="org-title">Organizational Title:</label>
+                        <input type="text" id="org-title" name="organization-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Mobile Phone:</label>
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="business-name">Business/Organization Name:</label>
+                        <input type="text" id="business-name" name="business-name" required autocomplete="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="membership-level">Choose your membership level:</label>
+                        <select id="membership-level" name="membership-level" required>
+                            <option value="" disabled selected>Select your membership level</option>
+                            <option value="np">NP Membership (Non-Profit) - No Fee</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Business/Organization Description:</label>
+                        <textarea id="description" name="description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit Application">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Get modal element and close button
+        const modal = document.getElementById('membershipModal');
+        const closeModal = document.getElementById('closeModal');
+
+        // Function to open the modal
+        function openModal() {
+            modal.style.display = 'block';
+        }
+
+        // Close the modal when clicking on the close button
+        closeModal.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        // Close the modal when clicking outside the modal content
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

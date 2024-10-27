@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Business Networking Event",
+        "date": "2024-11-05",
+        "location": "Conference Hall, Mbale",
+        "description": "Join us for a networking event to connect with local businesses and entrepreneurs."
+    },
+    {
+        "name": "Annual Business Fair",
+        "date": "2024-12-12",
+        "location": "Mbale Sports Complex",
+        "description": "A fair showcasing local businesses and their products."
+    },
+    {
+        "name": "Workshops on Business Growth",
+        "date": "2024-10-30",
+        "location": "Mbale Chamber of Commerce",
+        "description": "Attend workshops designed to help local businesses grow and thrive."
+    }
+]

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Official site of the Mbale Chamber of Commerce, supporting local businesses and economic growth.">
+    <meta name="author" content="Nabende Brian">
+    <meta property="og:title" content="Mbale Chamber of Commerce" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://github.com/nabende1/wdd231/blob/main/chamber/images/logo.png" />
+    <meta property="og:url" content="https://nabende1.github.io/wdd231/chamber/" />
+    <meta property="og:description" content="A brief description of your page content." />
+    <title>Mbale Chamber of Commerce</title>
+
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@400&display=swap"
+        rel="stylesheet">
+
+    <!-- Link to CSS Styles -->
+    <link rel="stylesheet" href="styles/join.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="scripts/join_script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo_div">
+            <img id="logo" src="images/logo.png" alt="logo" width="48" height="48">
+            <h1>Mbale<br><span>Chamber of Commerce</span></h1>
+        </div>
+        <button type="button" id="menu" aria-label="Open menu"></button>
+        <nav class="navigation">
+            <a href="index.html" >Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html" class="active">Join</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Join the Chamber of Commerce</h2>
+        <button onclick="openModal()">Open Membership Form</button>
+
+        <!-- Modal for Membership Form -->
+        <div class="modal" id="membershipModal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h3>Membership Application Form</h3>
+                <form action="thankyou.html" method="get" id="membership-form">
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="org-title">Organizational Title:</label>
+                        <input type="text" id="org-title" name="organization-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required autocomplete="email"
+                            placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Mobile Phone:</label>
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="business-name">Business/Organization Name:</label>
+                        <input type="text" id="business-name" name="business-name" required autocomplete="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="membership-level">Choose your membership level:</label>
+                        <select id="membership-level" name="membership-level" required>
+                            <option value="" disabled selected>Select your membership level</option>
+                            <option value="np">NP Membership (Non-Profit) - No Fee</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Business/Organization Description:</label>
+                        <textarea id="description" name="description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit Application">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Membership Cards Section -->
+    <section class="membership-cards">
+        <div class="card" id="np-card">
+            <h3>NP Membership</h3>
+            <p>No fee for non-profit organizations.</p>
+            <a href="#" class="modal-trigger" data-modal="np-modal">Learn More</a>
+        </div>
+        <div class="card" id="bronze-card">
+            <h3>Bronze Membership</h3>
+            <p>Basic membership benefits.</p>
+            <a href="#" class="modal-trigger" data-modal="bronze-modal">Learn More</a>
+        </div>
+        <div class="card" id="silver-card">
+            <h3>Silver Membership</h3>
+            <p>Intermediate membership benefits.</p>
+            <a href="#" class="modal-trigger" data-modal="silver-modal">Learn More</a>
+        </div>
+        <div class="card" id="gold-card">
+            <h3>Gold Membership</h3>
+            <p>Premium membership benefits.</p>
+            <a href="#" class="modal-trigger" data-modal="gold-modal">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Membership Level Modals -->
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="np-modal">&times;</span>
+            <h3>NP Membership Benefits</h3>
+            <p>Access to community events, training sessions, and networking opportunities.</p>
+        </div>
+    </div>
+
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="bronze-modal">&times;</span>
+            <h3>Bronze Membership Benefits</h3>
+            <p>Includes all NP benefits, plus promotional discounts and a monthly newsletter feature.</p>
+        </div>
+    </div>
+
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="silver-modal">&times;</span>
+            <h3>Silver Membership Benefits</h3>
+            <p>Includes all Bronze benefits, plus business spotlights, additional advertising, and quarterly training events.</p>
+        </div>
+    </div>
+
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="gold-modal">&times;</span>
+            <h3>Gold Membership Benefits</h3>
+            <p>Includes all Silver benefits, priority event access, premium advertising, and free entry to annual conferences.</p>
+        </div>
+    </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer-container">
+        <!-- Address Section -->
+        <div class="footer-address">
+            <h4>Mbale Chamber of Commerce</h4>
+            <p>123 Commerce Street, Mbale</p>
+            <p>P.O. Box 456, Mbale, Uganda</p>
+            <p>Phone: +256 123 456 789</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social-media">
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        </div>
+
+        <!-- Author Section -->
+        <div class="footer-author">
+            <p>WDD Class Project</p>
+            <p>Nabende Brian</p>
+            <p>&copy; <span id="year"></span> Mbale Chamber of Commerce <br> Last Modified: <span
+                    id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
