@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sedan+SC&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <title>Mbale Events Hub - Home</title>
+    <meta name="description" content="WDD 231">
+    <meta name="keywords" content="Brian Nabende, Web Developer, Resources, HTML, CSS, JavaScript, Frameworks">
+    <meta name="author" content="Brian Nabende">
+    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="images/logo.png" alt="Logo">
+            <h1>Mbale Events Hub</h1>
+        </div>
+        <button type="button" id="menu"></button>
+        <nav class="navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/hero-image.jpg" alt="Community Events" class="hero-image">
+            <a href="events.html" class="learn-more-button">Learn More</a>
+        </section>
+        <h2>Upcoming Events</h2>
+        <div class="events">
+            <div id="event-container" class="event-container"></div>
+        </div>
+        <button id="submit-event-button" class="submit-event-button"><a href="events.html">Submit Event</a> </button>
+    </main>
+
+    <footer class="footer-container">
+        <!-- Address Section -->
+        <div class="footer-address">
+            <h4>Mbale Events Hub</h4>
+            <p>123 Republic Street, Mbale</p>
+            <p>P.O. Box 456, Mbale, Uganda</p>
+            <p>Phone: +256 123 456 789</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social-media">
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        </div>
+
+        <!-- Author Section -->
+        <div class="footer-author">
+            <p>WDD Class Project</p>
+            <p>Nabende Brian</p>
+            <p>&copy; <span id="year"></span> Mbale Chamber of Commerce <br> Last Modified: <span
+                    id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

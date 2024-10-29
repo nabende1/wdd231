@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Community Clean-Up Day",
+        "date": "2024-11-05",
+        "time": "09:00 AM",
+        "location": "Market Square",
+        "description": "Join us for a day of cleaning up our local parks and streets. Supplies will be provided.",
+        "image": "images/event1.jpg"
+    },
+    {
+        "title": "Annual Fundraiser Gala",
+        "date": "2024-12-10",
+        "time": "07:00 AM",
+        "location": "Stadium town",
+        "description": "A night of dining and entertainment to raise funds for local charities.",
+        "image": "images/event2.jpg"
+    },
+    {
+        "title": "Local Arts Festival",
+        "date": "2024-11-20",
+        "time": "08:00 AM",
+        "location": "Market Square",
+        "description": "Celebrate local artists with food, music, and crafts at the annual arts festival.",
+        "image": "images/event3.jpg"
+    },
+    {
+        "title": "Community Clean-Up",
+        "date": "2024-11-15",
+        "time": "09:00 AM",
+        "location": "City Park",
+        "description": "Join us for a community clean-up to beautify our park.",
+        "image": "images/cleanup.jpg"
+    },
+    {
+        "title": "Local Farmers Market",
+        "date": "2024-11-20",
+        "time": "08:00 AM",
+        "location": "Market Square",
+        "description": "Support local farmers and get fresh produce at the market.",
+        "image": "images/farmers-market.jpg"
+    },
+    {
+        "title": "Charity Fun Run",
+        "date": "2024-12-05",
+        "time": "07:30 AM",
+        "location": "Downtown Route",
+        "description": "Participate in our annual charity run to support a good cause.",
+        "image": "images/fun-run.jpg"
+    }
+]

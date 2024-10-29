@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg-color: #16263c;
+    --secondary-bg-color: #40aecf;
+    --accent-color: #d1573f;
+    --text-color: #ebe9e8;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    min-height: 100vh;
+    background-color: var(--text-color);
+    color: var(--secondary-bg-color);
+
+}
+
+h1 {
+    text-align: left;
+    font-family: times, serif;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    text-align: center;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-bg-color);
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+}
+
+header div h1 {
+    font-size: 2.3rem;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    margin: 3%;
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 15px var(--secondary-bg-color);
+    /* Shadow effect */
+}
+
+header h1 {
+    color: var(--text-color);
+    font-family: "Sedan SC", serif;
+}
+
+nav {
+    margin: 1rem auto;
+}
+
+#menu {
+    font-size: 2rem;
+    font-weight: bold;
+    border: 0;
+    background: none;
+    color: var(--secondary-bg-color);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-bg-color);
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navigation a:hover {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+section {
+    border-radius: 5px;
+    box-shadow: 0 8px 20px var(--primary-bg-color);
+}
+
+.open a {
+    display: block;
+}
+
+.active::after {
+    content: " 🎯";
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.hero {
+    overflow: hidden;
+    position: relative; /* Allow absolute positioning of the button */
+    text-align: center; /* Center text within the section */
+}
+
+.hero-image {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.learn-more-button {
+    position: absolute; /* Position it over the hero image */
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    padding: 10px 20px; /* Add padding */
+    background-color: var(--accent-color); /* Background color */
+    color: var(--primary-bg-color); /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Make text bold */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.learn-more-button:hover {
+    background-color: var(--secondary-bg-color); /* Change color on hover */
+}
+
+
+/* Events section */
+.events {
+    padding: 20px;
+}
+
+.event {
+    padding: 5px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.event img {
+    width: 100px;
+    /* Adjust as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.event-details {
+    flex-grow: 1;
+}
+
+/* Submit event button */
+.submit-event-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    /* Button color */
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* Contact Page Styling */
+.contact-page h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.contact-info{
+    margin: 1rem;
+    padding: 1rem;
+}
+.contact-info a{
+    text-decoration: none;
+}
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--background-secondary-color);
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-bg-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: block;       /* Makes the button take up the full width of its container */
+    margin: 0 auto; 
+}
+
+.contact-form button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Form Feedback */
+.form-feedback {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+.footer-container {
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: flex-start;
+    /* Align sections to the start */
+}
+
+.footer-address,
+.footer-social-media,
+.footer-author {
+    width: 100%;
+    /* Each section takes full width */
+    text-align: left;
+    /* Align text to the left for consistency */
+    margin: 10px 0;
+    /* Add margin between sections */
+}
+
+/* Social Media icons displayed inline still */
+.footer-social-media a {
+    display: inline-block;
+    margin: 0 5px;
+    /* Adjust spacing */
+}
+
+.footer-social-media img {
+    width: 60px;
+    height: 60px;
+    margin: 1rem;
+}
+
+
+/* Adjustments for Author section */
+.footer-author {
+    text-align: left;
+    /* Ensure left-aligned text */
+}
+
+
+/* large view navigation ************************************/
+@media (min-width: 37.5em) {
+    h1 {
+        font-size: 2.5rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-top: 0px;
+        padding: 20px;
+        text-align: center;
+    }
+
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigation a {
+        display: flex;
+        flex: 1 1 100%;
+        padding: 1rem;
+        justify-content: center;
+    }
+
+    header div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        margin: 0 auto;
+        text-align: left;
+    }
+    .event-container {
+        display: grid;
+        gap: 20px; 
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    }
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 0;
+    }
+
+    .footer-container {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+}

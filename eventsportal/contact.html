@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sedan+SC&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <title>Mbale Events Hub | Contact Us</title>
+    <meta name="description" content="WDD 231">
+    <meta name="keywords" content="Brian Nabende, Web Developer, Resources, HTML, CSS, JavaScript, Frameworks">
+    <meta name="author" content="Brian Nabende">
+    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/events.css">
+    <style>
+        /* General layout styles */
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="images/logo.png" alt="Logo">
+            <h1>Mbale Events Hub</h1>
+        </div>
+        <button type="button" id="menu"></button>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+    <main class="contact-page">
+        <h2>Contact Us</h2>
+
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <p>If you have any questions, feedback, or would like to connect with us, please reach out through the form
+                below or contact us directly:</p>
+            <ul>
+                <li><strong>Address:</strong> 123 Main Street, Mbale, Uganda</li>
+                <li><strong>Phone:</strong> +256 123 456789</li>
+                <li><strong>Email:</strong> <a href="mailto:info@mbaleeventshub.com">info@mbaleeventshub.com</a></li>
+            </ul>
+            <div class="social-icons">
+                <!-- Placeholder for social media icons -->
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="form-feedback" class="form-feedback"></p>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <!-- Address Section -->
+        <div class="footer-address">
+            <h4>Mbale Events Hub</h4>
+            <p>123 Republic Street, Mbale</p>
+            <p>P.O. Box 456, Mbale, Uganda</p>
+            <p>Phone: +256 123 456 789</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social-media">
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        </div>
+
+        <!-- Author Section -->
+        <div class="footer-author">
+            <p>WDD Class Project</p>
+            <p>Nabende Brian</p>
+            <p>&copy; <span id="year"></span> Mbale Chamber of Commerce <br> Last Modified: <span
+                    id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="js/events.js"></script>
+</body>
+<script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+        const eventsContainer = document.getElementById("events-container");
+
+        // Fetch events from JSON file
+        fetch("data/events.json")
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(event => {
+                    const eventCard = document.createElement("div");
+                    eventCard.classList.add("event-card");
+
+                    eventCard.innerHTML = `
+                    <img src="${event.image}" alt="${event.title}" class="event-image">
+                    <div class="event-details">
+                        <h3 class="event-title">${event.title}</h3>
+                        <p class="event-date-time">📅 ${event.date} | ⏰ ${event.time}</p>
+                        <p class="event-location">📍 ${event.location}</p>
+                        <p class="event-description">${event.description}</p>
+                    </div>
+                `;
+
+                    eventsContainer.appendChild(eventCard);
+                });
+            })
+            .catch(error => console.error("Error loading events:", error));
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const submitEventLink = document.getElementById("submit-event-link");
+        const modal = document.getElementById("event-modal");
+        const closeModal = document.querySelector(".close");
+        const eventForm = document.getElementById("event-form");
+        const feedback = document.getElementById("feedback");
+
+        // Open modal when clicking on the submit event link
+        submitEventLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            modal.style.display = "block";
+        });
+
+        // Close modal when clicking on the close button
+        closeModal.addEventListener("click", () => {
+            modal.style.display = "none";
+            feedback.textContent = ""; // Clear feedback on close
+        });
+
+        // Close modal when clicking outside the modal content
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                feedback.textContent = ""; // Clear feedback on close
+            }
+        });
+
+        // Handle form submission
+        eventForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            // Simulate a successful submission
+            feedback.textContent = "Your event has been successfully submitted!";
+            feedback.style.color = "#2972fb";
+
+            // Clear the form after submission
+            eventForm.reset();
+
+            // Hide the modal after a short delay
+            setTimeout(() => {
+                modal.style.display = "none";
+                feedback.textContent = ""; // Clear feedback for the next submission
+            }, 2000);
+        });
+    });
+
+</script>
+
+</html>
