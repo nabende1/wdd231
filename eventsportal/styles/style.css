@@ -272,6 +272,17 @@ a{
     text-align: center;
 }
 
+.map {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.map iframe {
+    width: 100%; /* Makes the map responsive */
+    max-width: 1200px; /* Set a max width for larger screens */
+    height: 450px; /* Set the height */
+    border: 0; /* Removes the default border */
+}
 
 footer {
     background-color: var(--primary-bg-color);

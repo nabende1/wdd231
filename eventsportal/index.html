@@ -25,7 +25,7 @@
             <img class="logo" src="images/logo.png" alt="Logo" width="48" height="48">
             <h1>Mbale Events Hub</h1>
         </div>
-        <button type="button" id="menu"></button>
+        <button type="button" id="menu" aria-label="Open menu"></button>
         <nav class="navigation">
             <a href="index.html" class="active">Home</a>
             <a href="events.html">Events</a>
@@ -34,14 +34,27 @@
     </header>
     <main>
         <div class="hero">
-            <img src="images/hero-image.jpg" alt="Community Events" class="hero-image">
+            <img src="images/hero-image.jpg" alt="Community Events" class="hero-image" width="600" height="400">
             <a href="events.html" class="learn-more-button">Learn More</a>
-            </div>
+        </div>
         <h2>Upcoming Events</h2>
         <div class="events">
-            <div id="event-container" class="event-container"></div>
+            <div id="event-container" class="event-container" width="600" height="400"></div>
         </div>
-       <button id="submit-event-button" class="submit-event-button" onclick="window.location.href='events.html'">Submit Event </button>
+
+        <section class="map">
+            <h2>Our Location</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.5489898539723!2d34.17831621534111!3d1.0639741994309115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1754c11580dc87e7%3A0x60faffb15c8261e6!2sMbale%20City%2C%20Uganda!5e0!3m2!1sen!2sus!4v1634572517315!5m2!1sen!2sus" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"></iframe>
+        </section>
+
+        <button id="submit-event-button" class="submit-event-button" onclick="window.location.href='events.html'">Submit
+            Event </button>
     </main>
 
     <footer class="footer-container">
@@ -55,9 +68,12 @@
 
         <!-- Social Media Section -->
         <div class="footer-social-media">
-            <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a>
-            <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
-            <a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"
+                    width="600" height="400"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter" width="600"
+                    height="400"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"
+                    width="600" height="400"></a>
         </div>
 
         <!-- Author Section -->
@@ -68,6 +84,19 @@
                     id="last-modified"></span></p>
         </div>
     </footer>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/672113ef4304e3196ada2669/1ibcjbotu';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 
 </html>
