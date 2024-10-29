@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Official site of the Mbale Chamber of Commerce, supporting local businesses and economic growth.">
+    <meta name="author" content="Nabende Brian">
+    <meta property="og:title" content="Mbale Chamber of Commerce" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://github.com/nabende1/wdd231/blob/main/chamber/images/logo.png" />
+    <meta property="og:url" content="https://nabende1.github.io/wdd231/chamber/" />
+    <meta property="og:description" content="A brief description of your page content." />
+    <title>Mbale Chamber of Commerce</title>
+
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@400&display=swap"
+        rel="stylesheet">
+
+    <!-- Link to CSS Styles -->
+    <link rel="stylesheet" href="styles/style_discover.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="scripts/discover.js" defer></script>
+</head>
+
+<body id="discover">
+    <!-- Header -->
+    <header>
+        <div class="logo_div">
+            <img id="logo" src="images/logo.png" alt="logo" width="48" height="48">
+            <h1>Mbale<br><span>Chamber of Commerce</span></h1>
+        </div>
+        <button type="button" id="menu" aria-label="Open menu"></button>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="discover.html"class="active">Discover</a>
+            <a href="directory.html" >Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="discover-container">
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <div class="visit-message"></div> <!-- Last visit message will display here -->
+            <section>
+                <h2>Mbale Business Demographics</h2>
+                <p>Explore key statistics and trends in Mbale's growing business sector.</p>
+            </section>
+            <section>
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li>Business Networking Meetup - October 28, 2024</li>
+                    <li>Mbale Trade Expo - November 15, 2024</li>
+                    <li>Local Entrepreneurs Workshop - December 5, 2024</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Chamber Initiatives</h2>
+                <p>Join us in various programs aimed at fostering local business growth and community engagement.</p>
+            </section>
+        </aside>
+
+        <!-- Main Content with Lazy-Loaded Images -->
+        <main class="image-gallery">
+            <figure>
+                <img src="images//mbale1.jpeg" alt="Scenic view of Mount Elgon" loading="lazy">
+                <figcaption>Mount Elgon National Park</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mbale2.jpeg" alt="Mbale's vibrant market" loading="lazy">
+                <figcaption>Mbale Market</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mbale3.jpg" alt="Local crafts and artisans" loading="lazy">
+                <figcaption>Local Handicrafts</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mbale4.jpg" alt="Community event at Mbale town square" loading="lazy">
+                <figcaption>Town Square Events</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mbale5.jpg" alt="Waterfall near Mbale" loading="lazy">
+                <figcaption>Sipi Falls</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mbale6.jpg" alt="Mbale's night view" loading="lazy">
+                <figcaption>Mbale Night View</figcaption>
+            </figure>
+        </main>
+    </div>
+    <!-- Footer -->
+    <footer class="footer-container">
+        <!-- Address Section -->
+        <div class="footer-address">
+            <h4>Mbale Chamber of Commerce</h4>
+            <p>123 Commerce Street, Mbale</p>
+            <p>P.O. Box 456, Mbale, Uganda</p>
+            <p>Phone: +256 123 456 789</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social-media">
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        </div>
+
+        <!-- Author Section -->
+        <div class="footer-author">
+            <p>WDD Class Project</p>
+            <p>Nabende Brian</p>
+            <p>&copy; <span id="year"></span> Mbale Chamber of Commerce <br> Last Modified: <span
+                    id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

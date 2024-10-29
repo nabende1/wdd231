@@ -3,174 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce Membership Form</title>
+    <title>Discover Mbale - Mbale Business Chamber</title>
     <style>
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 10% auto;
+        /* Root Variables for Colors and Fonts */
+        :root {
+            --main-bg-color: #fdfdfd;
+            --sidebar-bg-color: #f4f4f9;
+            --accent-color: #333;
+            --primary-color: #0066cc;
+            --secondary-color: #009688;
+            --text-color: #444;
+            --font-family: Arial, sans-serif;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+            background-color: var(--main-bg-color);
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        p, ul {
+            font-size: 1rem;
+            margin: 10px 0;
+            color: var(--accent-color);
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            padding: 5px 0;
+        }
+
+        /* Discover Page Layout */
+        .discover-container {
             padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
+            display: grid;
+            grid-template-columns: 1fr; /* Single column on mobile */
+            gap: 20px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            padding: 20px;
+            background-color: var(--sidebar-bg-color);
             border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover, .close:focus {
-            color: black;
-            cursor: pointer;
-        }
-
-        /* Form Styles */
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
-            width: 100%;
+        .visit-message {
+            background-color: var(--secondary-color);
+            color: #fff;
             padding: 10px;
-            margin-top: 5px;
             border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
-
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        /* Membership Dropdown */
-        select {
-            width: 100%;
-            padding: 10px;
             margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            appearance: none;
-            background-color: #fff;
-            font-size: 16px;
-        }
-
-        /* Main Content */
-        main {
-            padding: 20px;
+            font-weight: bold;
             text-align: center;
+        }
+
+        /* Image Gallery for Mobile */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column on mobile */
+            gap: 20px;
+        }
+
+        .image-gallery figure {
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 0;
+            position: relative;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        .image-gallery figcaption {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        /* Hover Effect for Desktop Only */
+        @media (min-width: 768px) {
+            .image-gallery figure:hover img {
+                transform: scale(1.1);
+                opacity: 0.9;
+            }
+        }
+
+        /* Tablet and Larger Screens */
+        @media (min-width: 768px) {
+            .discover-container {
+                grid-template-columns: 1fr 3fr; /* Sidebar and Main Content */
+            }
+
+            /* Image Gallery Layout for Desktop */
+            .image-gallery {
+                grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+            }
         }
     </style>
 </head>
 <body>
-    <main>
-        <h2>Join the Chamber of Commerce</h2>
-        <button onclick="openModal()">Open Membership Form</button>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <!-- Existing navigation links -->
+        </nav>
+    </header>
 
-        <!-- Modal for Membership Form -->
-        <div class="modal" id="membershipModal">
-            <div class="modal-content">
-                <span class="close" id="closeModal">&times;</span>
-                <h3>Membership Application Form</h3>
-                <form action="thankyou.html" method="get" id="membership-form">
-                    <div class="form-group">
-                        <label for="first-name">First Name:</label>
-                        <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name:</label>
-                        <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="org-title">Organizational Title:</label>
-                        <input type="text" id="org-title" name="organization-title" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@mail.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Mobile Phone:</label>
-                        <input type="tel" id="phone" name="phone" required autocomplete="tel">
-                    </div>
-                    <div class="form-group">
-                        <label for="business-name">Business/Organization Name:</label>
-                        <input type="text" id="business-name" name="business-name" required autocomplete="organization">
-                    </div>
-                    <div class="form-group">
-                        <label for="membership-level">Choose your membership level:</label>
-                        <select id="membership-level" name="membership-level" required>
-                            <option value="" disabled selected>Select your membership level</option>
-                            <option value="np">NP Membership (Non-Profit) - No Fee</option>
-                            <option value="bronze">Bronze Membership</option>
-                            <option value="silver">Silver Membership</option>
-                            <option value="gold">Gold Membership</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Business/Organization Description:</label>
-                        <textarea id="description" name="description" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Submit Application">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </main>
+    <!-- Main Content Area -->
+    <div class="discover-container">
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <div class="visit-message"></div> <!-- Last visit message will display here -->
+            <section>
+                <h2>Mbale Business Demographics</h2>
+                <p>Explore key statistics and trends in Mbale's growing business sector.</p>
+            </section>
+            <section>
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li>Business Networking Meetup - October 28, 2024</li>
+                    <li>Mbale Trade Expo - November 15, 2024</li>
+                    <li>Local Entrepreneurs Workshop - December 5, 2024</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Chamber Initiatives</h2>
+                <p>Join us in various programs aimed at fostering local business growth and community engagement.</p>
+            </section>
+        </aside>
+
+        <!-- Main Content with Lazy-Loaded Images -->
+        <main class="image-gallery">
+            <figure>
+                <img src="images//mbale1.jpeg" alt="Scenic view of Mount Elgon" loading="lazy">
+                <figcaption>Mount Elgon National Park</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mbale2.jpeg" alt="Mbale's vibrant market" loading="lazy">
+                <figcaption>Mbale Market</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mbale3.jpg" alt="Local crafts and artisans" loading="lazy">
+                <figcaption>Local Handicrafts</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mbale4.jpg" alt="Community event at Mbale town square" loading="lazy">
+                <figcaption>Town Square Events</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mbale5.jpg" alt="Waterfall near Mbale" loading="lazy">
+                <figcaption>Sipi Falls</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mbale6.jpg" alt="Mbale's night view" loading="lazy">
+                <figcaption>Mbale Night View</figcaption>
+            </figure>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Existing footer content -->
+    </footer>
 
     <script>
-        // Get modal element and close button
-        const modal = document.getElementById('membershipModal');
-        const closeModal = document.getElementById('closeModal');
+        // JavaScript to handle last visit message
+        document.addEventListener('DOMContentLoaded', () => {
+            const visitMessageElement = document.querySelector('.visit-message');
+            const lastVisit = localStorage.getItem('lastVisit');
+            const now = Date.now();
+            const msPerDay = 86400000; // Milliseconds in a day
+            let message = "";
 
-        // Function to open the modal
-        function openModal() {
-            modal.style.display = 'block';
-        }
-
-        // Close the modal when clicking on the close button
-        closeModal.onclick = function() {
-            modal.style.display = 'none';
-        }
-
-        // Close the modal when clicking outside the modal content
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
+            if (lastVisit) {
+                const daysBetween = Math.floor((now - lastVisit) / msPerDay);
+                if (daysBetween < 1) {
+                    message = "Back so soon! Awesome!";
+                } else if (daysBetween === 1) {
+                    message = "You last visited 1 day ago.";
+                } else {
+                    message = `You last visited ${daysBetween} days ago.`;
+                }
+            } else {
+                message = "Welcome! Let us know if you have any questions.";
             }
-        }
+
+            visitMessageElement.innerText = message;
+            localStorage.setItem('lastVisit', now);
+        });
     </script>
 </body>
 </html>
