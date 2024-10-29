@@ -108,11 +108,8 @@ nav {
     color: var(--accent-color);
     font-weight: 700;
 }
-.hero h4{
-    font-size: 1.5rem;
-}
 
-section {
+section, .hero {
     border-radius: 5px;
     box-shadow: 0 8px 20px var(--primary-bg-color);
 }
