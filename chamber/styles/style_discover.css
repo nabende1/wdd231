@@ -30,6 +30,7 @@ header {
 
 header div {
     display: flex;
+    align-items: center;
     background-color: #1d1a15;
 }
 
@@ -280,7 +281,6 @@ footer p {
 
     header div {
         justify-content: left;
-        align-items: left;
     }
 
     header div h1 {
