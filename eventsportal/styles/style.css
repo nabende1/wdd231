@@ -109,7 +109,7 @@ nav {
     font-weight: 700;
 }
 
-section, .hero {
+section, .hero ,.events-container {
     border-radius: 5px;
     box-shadow: 0 8px 20px var(--primary-bg-color);
 }
