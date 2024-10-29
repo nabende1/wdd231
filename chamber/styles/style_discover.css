@@ -30,7 +30,6 @@ header {
 
 header div {
     display: flex;
-    align-items: center;
     background-color: #1d1a15;
 }
 
